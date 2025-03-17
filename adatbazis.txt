@@ -1,0 +1,21 @@
+CREATE DATABASE viragbolt
+    DEFAULT CHARACTER SET utf8mb4 
+    COLLATE utf8mb4_hungarian_ci;
+
+USE viragbolt;
+
+CREATE TABLE IF NOT EXISTS kategoriak (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nev VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS aruk (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    nev VARCHAR(255) NOT NULL,
+    kategoriaId INTEGER,
+    leiras TEXT,
+    keszlet INTEGER DEFAULT 0 ,
+    ar INTEGER,
+    kepUrl TEXT,
+    FOREIGN KEY(kategoriaId) REFERENCES kategoriak(id) ON DELETE SET NULL
+);
