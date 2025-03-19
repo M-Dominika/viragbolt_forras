@@ -13,6 +13,7 @@ body {
     background-position: center;
 	height: 100vh;
     background-image: url("fokep.jpg");
+    background-size: cover;
 }
 
 header {
@@ -105,7 +106,7 @@ footer ul li {
 
 .arukep img:hover {    
     cursor: pointer;
-    box-shadow-top: 0px, 2px 20px black;
+    box-shadow: 0px, 2px 20px black;
 }
 
 .arukep {
